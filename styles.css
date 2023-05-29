@@ -173,11 +173,11 @@ header {
 .header-icon {
   height: 25px;
   width: 25px;
-  margin-left: 20px;
 }
 
 .header-icon:first-of-type {
   margin-left: 0px;
+  margin-right: 20px;
 }
 
 .header-icon:last-of-type {
@@ -227,11 +227,15 @@ header {
   border: 1px solid #aaa;
 }
 
+.search-bar-mobile {
+  display: none;
+}
+
 nav {
   width: 100%;
 }
 
-#menu-nav {
+.menu-nav {
   display: flex;
   justify-content: space-around;
 }
@@ -545,16 +549,28 @@ h2 {
     justify-content: center;
   }
 
-  #menu-nav {
+  .menu-nav {
     display: none;
+  }
+
+  .menu-nav-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-nav li {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   #icon-div img[src="imagens/menu.png"] {
     display: block;
   }
 
-  .header-icon:nth-child(2) {
-    margin-right: 0px;
+  #search-bar-mobile {
+    width: 95vw;
+    height: 25px;
   }
 }
 

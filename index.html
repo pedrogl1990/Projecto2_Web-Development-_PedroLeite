@@ -36,7 +36,7 @@
         <button type="button" id="modal-close-button">X</button>
       </form>
     </div>
-    <header>
+    <header id="header">
       <div id="top-header">
         <h1>
           <a href="">
@@ -74,19 +74,25 @@
               title="Login"
             />
           </a>
-          <a href="" class="header-icon-link" id="menu-icon-link">
-            <img
-              class="header-icon"
-              id="menu-icon"
-              src="imagens/menu.png"
-              alt="hamburguer de menu"
-              title="Menu"
-            />
-          </a>
+          <img
+            class="header-icon"
+            id="menu-icon"
+            src="imagens/menu.png"
+            alt="hamburguer de menu"
+            title="Menu"
+          />
         </div>
       </div>
       <nav>
-        <ul id="menu-nav">
+        <ul id="menu-nav" class="menu-nav">
+          <li class="menu-nav-option">
+            <input
+              type="text"
+              name="search-bar-mobile"
+              id="search-bar-mobile"
+              class="search-bar-mobile"
+            />
+          </li>
           <li class="menu-nav-option">Contabilistas</li>
           <li class="menu-nav-option">Setor Privado</li>
           <li class="menu-nav-option">Setor Público</li>

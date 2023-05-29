@@ -1,9 +1,13 @@
+const header = document.getElementById("header");
 const addUserIconLink = document.getElementById("addUser-icon-link");
 const loginIconLink = document.getElementById("login-icon-link");
 const userIcon = document.getElementById("user-icon");
 const loginIcon = document.getElementById("login-icon");
 const searchIcon = document.getElementById("search-icon");
 const searchBar = document.querySelector(".search-bar");
+const searchBarMobile = document.querySelector("#search-bar-mobile");
+const menuIcon = document.getElementById("menu-icon");
+const navbar = document.getElementById("menu-nav");
 const modal = document.querySelector("#modal");
 const html = [...document.getElementsByTagName("html")];
 const modalCloseBtn = document.getElementById("modal-close-button");
@@ -53,7 +57,7 @@ const boasVindas = (name) => {
 //Controla o aparecimento/desaparecimento/formatação da searchbar ao clicar na lupa ou em qualquer outro ponto da página
 
 document.addEventListener("click", (evt) => {
-  if (evt.target.id === "search-icon") {
+  if (evt.target.id === "search-icon" && window.innerWidth > 800) {
     if (searchBar.classList.contains("active-bar")) {
       searchBar.classList.remove("active-bar");
     } else {
@@ -63,6 +67,19 @@ document.addEventListener("click", (evt) => {
         searchBar.classList.add("active-bar:focus-visible");
         searchBar.classList.add("active-bar");
       }, 500);
+    }
+  } else if (
+    (evt.target.id === "search-icon" && window.innerWidth <= 800) ||
+    (evt.target.id === "menu-icon" && window.innerWidth <= 800)
+  ) {
+    if (navbar.classList.contains("menu-nav-active")) {
+      navbar.classList.remove("menu-nav-active");
+      header.style.height = "80px";
+    } else {
+      navbar.classList.add("menu-nav-active");
+      header.style.height = "325px";
+      searchBarMobile.style.display = "block";
+      searchBarMobile.focus();
     }
   } else {
     searchBar.classList.remove("active-bar");
@@ -155,3 +172,15 @@ fetch("http://localhost:3000/users")
       userLogged = false;
     }
   });
+
+const adjustNavbarHeight = () => {
+  if (window.innerWidth > 800) {
+    header.style.height = "80px";
+    searchBarMobile.style.display = "none";
+  } else {
+    searchBarMobile.style.display = "block";
+    header.style.height = "325px";
+  }
+};
+
+window.addEventListener("resize", adjustNavbarHeight);
