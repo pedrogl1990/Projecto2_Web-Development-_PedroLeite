@@ -78,13 +78,25 @@ document.addEventListener("click", (evt) => {
     } else {
       navbar.classList.add("menu-nav-active");
       header.style.height = "325px";
-      searchBarMobile.style.display = "block";
-      searchBarMobile.focus();
+      if (evt.target.id === "search-icon") {
+        searchBarMobile.style.display = "block";
+        searchBarMobile.focus();
+      }
     }
   } else {
     searchBar.classList.remove("active-bar");
   }
 });
+
+const adjustNavbarHeight = () => {
+  if (window.innerWidth > 800) {
+    header.style.height = "80px";
+    searchBarMobile.style.display = "none";
+    navbar.classList.remove("menu-nav-active");
+  }
+};
+
+window.addEventListener("resize", adjustNavbarHeight);
 
 //Controlo de aparecimento da modal ao clicar no icone de login
 
@@ -172,15 +184,3 @@ fetch("http://localhost:3000/users")
       userLogged = false;
     }
   });
-
-const adjustNavbarHeight = () => {
-  if (window.innerWidth > 800) {
-    header.style.height = "80px";
-    searchBarMobile.style.display = "none";
-  } else {
-    searchBarMobile.style.display = "block";
-    header.style.height = "325px";
-  }
-};
-
-window.addEventListener("resize", adjustNavbarHeight);
