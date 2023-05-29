@@ -17,24 +17,10 @@
   </head>
   <body>
     <div id="modal">
-      <form action="" id="modal-box" novalidate>
-        <div id="modal-form">
-          <p id="form-title">Controlo de acessos</p>
-          <p id="form-message"></p>
-          <span id="email-wrapper">
-            <label for="userEmail">E-mail: </label>
-            <input type="email" name="userEmail" id="userEmail" />
-          </span>
-          <span id="password-wrapper">
-            <label for="userPassword">Senha: </label>
-            <input type="password" name="userPassword" id="userPassword" />
-          </span>
-          <span id="form-button-wrapper">
-            <button type="submit" id="submitCredentials">Validar</button>
-          </span>
-        </div>
-        <button type="button" id="modal-close-button">X</button>
-      </form>
+      <div id="modal-box">
+        <p id="modal-message">Registo efetuado com sucesso!</p>
+        <button type="button" id="modal-close-button">Ok</button>
+      </div>
     </div>
     <header id="header">
       <div id="top-header">
@@ -134,9 +120,10 @@
               required
           /></span>
         </fieldset>
-        <p id="alerta-senha">
+        <p id="alertPassword">
           É obrigatório confirmar a senha atual ou alterada
         </p>
+        <p id="otherAlerts" class="otherAlerts"></p>
         <fieldset id="new-user-address">
           <span
             ><label for="newUserMorada">Morada:</label>
@@ -145,7 +132,7 @@
           <br />
           <span
             ><label for="newUserCP">Código Postal:</label>
-            <input type="text" id="newUserMorada" name="newUserMorada" required
+            <input type="text" id="newUserCP" name="newUserCP" required
           /></span>
           <br />
           <span

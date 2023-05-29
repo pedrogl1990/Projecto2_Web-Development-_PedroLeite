@@ -65,12 +65,12 @@ body {
 }
 
 #modal-box {
-  width: 500px;
-  height: 300px;
+  width: 400px;
+  height: 250px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: relative;
 }
@@ -83,58 +83,13 @@ body {
   height: 250px;
 }
 
-#form-title {
-  font-size: 25px;
-  font-weight: 800;
-}
-
-#form-message {
-  display: none;
-  font-size: 14px;
-}
-
-#modal-form span {
-  display: flex;
-  align-items: center;
-}
-
-#modal-form label {
-  margin-right: 10px;
-  width: 50px;
-}
-
-#modal-form input {
-  flex-grow: 1;
-  height: 20px;
-  border: 1px solid #aaa;
-}
-
-#form-button-wrapper {
-  display: flex;
-  justify-content: flex-end;
-}
-
-#modal-form button {
+#modal-close-button {
   width: 100px;
   height: 40px;
   background-color: #0d6efd;
   color: #fff;
   border: none;
   border-radius: 5px;
-}
-
-#modal-form button:hover {
-  cursor: pointer;
-}
-
-#modal-close-button {
-  position: absolute;
-  right: -15px;
-  top: -15px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5), 0 10px 8px rgba(0, 0, 0, 0.16);
 }
 
 #modal-close-button:hover {
@@ -288,10 +243,21 @@ h2 {
   border: 1px solid #aaa;
 }
 
-#alerta-senha {
+#alertPassword {
   margin-top: 20px;
   margin-bottom: 20px;
   color: #ff0000;
+}
+
+.otherAlerts {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ff0000;
+}
+
+.otherAlertsActive {
+  display: block;
 }
 
 #submit-new-user-wrapper {

@@ -5,6 +5,9 @@
       "nome": "Pedro Leite",
       "email": "pgleite1990@gmail.com",
       "password": "pedro1234",
+      "morada": "Rua dos templários 454",
+      "código postal": "4410-023",
+      "país": "Portugal",
       "activo": "sim"
     },
     {
@@ -12,12 +15,18 @@
       "nome": "Ana Rita Dias",
       "email": "a.rita@gmail.com",
       "password": "rita1234",
+      "morada": "Rua de todas as flores 12",
+      "código postal": "4650-453",
+      "país": "Portugal",
       "activo": "sim"
     },
     {
       "id": 2,
       "nome": "César Dias",
       "email": "cesar.daniel@gmail.com",
+      "morada": "Rua da amizade 543",
+      "código postal": "4655-145",
+      "país": "Portugal",
       "password": "cesar123",
       "activo": "não"
     }
