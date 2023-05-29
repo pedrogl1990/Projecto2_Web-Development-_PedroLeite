@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "nome": "Pedro Leite",
+      "email": "pgleite1990@gmail.com",
+      "password": "pedro1234",
+      "activo": "sim"
+    },
+    {
+      "id": 1,
+      "nome": "Ana Rita Dias",
+      "email": "a.rita@gmail.com",
+      "password": "rita1234",
+      "activo": "sim"
+    },
+    {
+      "id": 2,
+      "nome": "César Dias",
+      "email": "cesar.daniel@gmail.com",
+      "password": "cesar123",
+      "activo": "não"
+    }
+  ]
+}
