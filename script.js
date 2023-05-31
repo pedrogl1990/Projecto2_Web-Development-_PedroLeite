@@ -30,6 +30,7 @@ const logged = () => {
     userIcon.setAttribute("src", "imagens/user.png");
     userIcon.setAttribute("alt", "perfil do user");
     userIcon.setAttribute("title", "Perfil");
+    addUserIconLink.setAttribute("href", "profile.html");
     loginIcon.setAttribute("src", "imagens/logout.png");
     loginIcon.setAttribute("alt", "botão de logout");
     loginIcon.setAttribute("title", "Logout");
@@ -37,6 +38,7 @@ const logged = () => {
     userIcon.setAttribute("src", "imagens/add-user.png");
     userIcon.setAttribute("alt", "adicionar user");
     userIcon.setAttribute("title", "Registar");
+    addUserIconLink.setAttribute("href", "register.html");
     loginIcon.setAttribute("src", "imagens/login.png");
     loginIcon.setAttribute("alt", "botão de login");
     loginIcon.setAttribute("title", "Login");

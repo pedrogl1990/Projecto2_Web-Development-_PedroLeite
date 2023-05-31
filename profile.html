@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PRIMAVERA Business Software Solutions</title>
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="profile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,11 +16,9 @@
     <link rel="icon" href="imagens/favicon.ico" />
   </head>
   <body>
-    <div id="modal">
-      <div id="modal-box">
-        <p id="modal-message">Registo efetuado com sucesso!</p>
-        <button type="button" id="modal-close-button">Ok</button>
-      </div>
+    <div id="modal-box">
+      <p id="modal-message">Alterações efetuadas com sucesso!</p>
+      <button type="button" id="modal-close-button">Ok</button>
     </div>
     <header id="header">
       <div id="top-header">
@@ -88,35 +86,47 @@
         </ul>
       </nav>
     </header>
-    <section id="new-register">
-      <h2>Novo Registo</h2>
-      <form action="" id="new-register-form">
-        <fieldset id="new-user-access">
+    <section id="profile-section">
+      <h2>Perfil</h2>
+      <div id="profile-info">
+        <p id="name">Nome:</p>
+        <p id="email">E-mail:</span></p>
+        <p id="password">Senha:</p>
+        <p id="address">Morada:</p>
+        <p id="pc">Código Postal:</p>
+        <p id="country">País:</p>
+      </div>
+      <button id="profile-update-button">Alterar Informação</button>
+    </section>
+    <section id="profile-edit">
+      <h2>Perfil</h2>
+      <form action="" id="edit-profile-form">
+        <fieldset id="profile-user-access">
           <span
-            ><label for="newUserName">Nome:</label>
-            <input type="text" id="newUserName" name="newUserName" required
+            ><label for="profileName">Nome:</label>
+            <input type="text" id="profileName" name="profileName" required
           /></span>
           <br />
           <span
-            ><label for="newUserEmail">E-mail:</label>
-            <input type="email" id="newUserEmail" name="newUserEmail" required
+            ><label for="profileEmail">E-mail:</label>
+            <input type="email" id="profileEmail" name="profileEmail" required
           /></span>
           <br />
           <span
-            ><label for="newUserPassword">Senha:</label>
+            ><label for="profilePassword">Senha:</label>
             <input
               type="password"
-              id="newUserPassword"
-              name="newUserPassword"
+              id="profilePassword"
+              name="profilePassword"
               required
           /></span>
           <br />
           <span
-            ><label for="newUserPasswordCheck">Confirme a senha:</label>
+            ><label for="profilePasswordCheck">Confirme a senha:</label>
             <input
               type="password"
-              id="newUserPasswordCheck"
-              name="newUserPasswordCheck"
+              id="profilePasswordCheck"
+              name="profilePasswordCheck"
               required
           /></span>
         </fieldset>
@@ -124,32 +134,32 @@
           É obrigatório confirmar a senha atual ou alterada
         </p>
         <p id="otherAlerts" class="otherAlerts"></p>
-        <fieldset id="new-user-address">
+        <fieldset id="profile-user-address">
           <span
-            ><label for="newUserAddress">Morada:</label>
+            ><label for="profileAddress">Morada:</label>
             <input
               type="text"
-              id="newUserAddress"
-              name="newUserAddress"
+              id="profileAddress"
+              name="profileAddress"
               required
           /></span>
           <br />
           <span
-            ><label for="newUserPC">Código Postal:</label>
-            <input type="text" id="newUserPC" name="newUserPC" required
+            ><label for="profilePC">Código Postal:</label>
+            <input type="text" id="profilePC" name="profilePC" required
           /></span>
           <br />
           <span
-            ><label for="newUserCountry">País:</label>
+            ><label for="profileCountry">País:</label>
             <input
               type="text"
-              id="newUserCountry"
-              name="newUserCountry"
+              id="profileCountry"
+              name="profileCountry"
               required
           /></span>
         </fieldset>
-        <span id="submit-new-user-wrapper">
-          <button type="submit" id="submit-new-user">Registar</button>
+        <span id="submit-profile-wrapper">
+          <button type="submit" id="submit-profile">Guardar alterações</button>
         </span>
       </form>
     </section>
@@ -239,6 +249,6 @@
         <p>919 204 462</p>
       </div>
     </div>
-    <script src="register.js"></script>
+    <script src="profile.js"></script>
   </body>
 </html>
