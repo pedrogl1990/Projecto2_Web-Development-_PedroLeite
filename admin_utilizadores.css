@@ -49,6 +49,32 @@ body {
   cursor: pointer;
 }
 
+/* CSS Modal */
+
+#modal-box {
+  width: 400px;
+  height: 250px;
+  background-color: #fff;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+#modal-close-button {
+  width: 100px;
+  height: 40px;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#modal-close-button:hover {
+  cursor: pointer;
+}
+
 /* CSS Header */
 
 header {
@@ -170,25 +196,23 @@ h2 {
 
 /* CSS Main - Profile View*/
 
-#profile-section {
+#user-section {
   display: flex;
   flex-direction: column;
-  height: 550px;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
   justify-content: space-evenly;
   align-items: center;
 }
 
-#profile-info {
+#user-info {
   display: flex;
   flex-direction: column;
   width: 95%;
 }
 
-#profile-info p {
-  margin-bottom: 15px;
-}
-
-#profile-update-button {
+#user-update-button {
   width: 130px;
   height: 40px;
   background-color: #0d6efd;
@@ -197,106 +221,7 @@ h2 {
   border-radius: 5px;
 }
 
-#profile-update-button:hover {
-  cursor: pointer;
-}
-
-/* CSS Main - Profile Edit*/
-
-#profile-edit {
-  flex-direction: column;
-  height: 800px;
-  justify-content: space-evenly;
-  align-items: center;
-  display: none;
-}
-
-#profile-edit-info {
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 95%;
-}
-
-#profile-edit-password {
-  height: 290px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 95%;
-}
-
-#edit-profile-form {
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-}
-
-#edit-profile-password-form {
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-}
-
-#edit-profile-form span,
-#edit-profile-password-form span {
-  display: flex;
-  align-items: center;
-}
-
-#edit-profile-form label,
-#edit-profile-password-form label {
-  margin-right: 10px;
-  width: 150px;
-}
-
-#edit-profile-form input,
-#edit-profile-password-form input {
-  flex-grow: 1;
-  height: 20px;
-  border: 1px solid #aaa;
-}
-
-#alertPassword {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #ff0000;
-}
-
-.otherAlerts {
-  display: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #ff0000;
-}
-
-.otherAlertsActive {
-  display: block;
-}
-
-#submit-profile-wrapper,
-#submit-profile-password-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-}
-
-#submit-profile,
-#submit-profile-password {
-  width: 130px;
-  height: 40px;
-  background-color: #0d6efd;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-}
-
-#submit-profile:hover,
-#submit-profile-password:hover {
+#user-update-button:hover {
   cursor: pointer;
 }
 

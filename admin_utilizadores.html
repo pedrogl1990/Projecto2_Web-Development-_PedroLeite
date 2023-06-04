@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PRIMAVERA Business Software Solutions</title>
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="admin_utilizadores.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,35 +16,9 @@
     <link rel="icon" href="imagens/favicon.ico" />
   </head>
   <body>
-    <div id="modalLog">
-      <form action="" id="modal-box-log" novalidate>
-        <div id="modal-form-log">
-          <p id="form-title-log">Controlo de acessos</p>
-          <p id="form-message-log"></p>
-          <span id="email-wrapper-log">
-            <label for="userEmailLog">E-mail: </label>
-            <input type="email" name="userEmailLog" id="userEmailLog" />
-          </span>
-          <span id="password-wrapper-log">
-            <label for="userPasswordLog">Senha: </label>
-            <input
-              type="password"
-              name="userPasswordLog"
-              id="userPasswordLog"
-            />
-          </span>
-          <span id="form-button-wrapper-log">
-            <button type="submit" id="submitCredentialsLog">Validar</button>
-          </span>
-        </div>
-        <button type="button" id="modal-close-button-log">X</button>
-      </form>
-    </div>
-    <div id="modal">
-      <div id="modal-box">
-        <p id="modal-message">Registo efetuado com sucesso!</p>
-        <button type="button" id="modal-close-button">Ok</button>
-      </div>
+    <div id="modal-box">
+      <p id="modal-message">Alterações efetuadas com sucesso!</p>
+      <button type="button" id="modal-close-button">Ok</button>
     </div>
     <header id="header">
       <div id="top-header">
@@ -125,70 +99,10 @@
         </ul>
       </nav>
     </header>
-    <section id="new-register">
-      <h2>Novo Registo</h2>
-      <form action="" id="new-register-form">
-        <fieldset id="new-user-access">
-          <span
-            ><label for="newUserName">Nome:</label>
-            <input type="text" id="newUserName" name="newUserName" required
-          /></span>
-          <br />
-          <span
-            ><label for="newUserEmail">E-mail:</label>
-            <input type="email" id="newUserEmail" name="newUserEmail" required
-          /></span>
-          <br />
-          <span
-            ><label for="newUserPassword">Senha:</label>
-            <input
-              type="password"
-              id="newUserPassword"
-              name="newUserPassword"
-              required
-          /></span>
-          <br />
-          <span
-            ><label for="newUserPasswordCheck">Confirme a senha:</label>
-            <input
-              type="password"
-              id="newUserPasswordCheck"
-              name="newUserPasswordCheck"
-              required
-          /></span>
-        </fieldset>
-        <p id="alertPassword">
-          É obrigatório confirmar a senha atual ou alterada
-        </p>
-        <p id="otherAlerts" class="otherAlerts"></p>
-        <fieldset id="new-user-address">
-          <span
-            ><label for="newUserAddress">Morada:</label>
-            <input
-              type="text"
-              id="newUserAddress"
-              name="newUserAddress"
-              required
-          /></span>
-          <br />
-          <span
-            ><label for="newUserPC">Código Postal:</label>
-            <input type="text" id="newUserPC" name="newUserPC" required
-          /></span>
-          <br />
-          <span
-            ><label for="newUserCountry">País:</label>
-            <input
-              type="text"
-              id="newUserCountry"
-              name="newUserCountry"
-              required
-          /></span>
-        </fieldset>
-        <span id="submit-new-user-wrapper">
-          <button type="submit" id="submit-new-user">Registar</button>
-        </span>
-      </form>
+    <section id="user-section">
+      <h2>Utilizadores</h2>
+      <div id="user-info"></div>
+      <button id="user-update-button">Alterar Permissões</button>
     </section>
     <footer id="footer">
       <div class="footer-submenu">
@@ -276,6 +190,6 @@
         <p>919 204 462</p>
       </div>
     </div>
-    <script src="register.js"></script>
+    <script src="admin_utilizadores.js"></script>
   </body>
 </html>

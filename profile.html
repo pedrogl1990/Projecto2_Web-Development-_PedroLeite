@@ -16,10 +16,6 @@
     <link rel="icon" href="imagens/favicon.ico" />
   </head>
   <body>
-    <div id="modal-box">
-      <p id="modal-message">Alterações efetuadas com sucesso!</p>
-      <button type="button" id="modal-close-button">Ok</button>
-    </div>
     <header id="header">
       <div id="top-header">
         <h1>
@@ -40,6 +36,15 @@
             alt="botão de pesquisa"
             title="Pesquisa"
           />
+          <a class="header-icon-link" id="admin-icon-link" href="admin_utilizadores.html">
+            <img
+              class="header-icon"
+              id="admin-icon"
+              src="imagens/admin.png"
+              alt="icone de administração"
+              title="Administrar"
+            />
+          </a>
           <a class="header-icon-link" id="addUser-icon-link" href="">
             <img
               class="header-icon"
@@ -99,69 +104,73 @@
       <button id="profile-update-button">Alterar Informação</button>
     </section>
     <section id="profile-edit">
-      <h2>Perfil</h2>
-      <form action="" id="edit-profile-form">
-        <fieldset id="profile-user-access">
-          <span
-            ><label for="profileName">Nome:</label>
-            <input type="text" id="profileName" name="profileName" required
-          /></span>
-          <br />
-          <span
-            ><label for="profileEmail">E-mail:</label>
-            <input type="email" id="profileEmail" name="profileEmail" required
-          /></span>
-          <br />
-          <span
-            ><label for="profilePassword">Senha:</label>
-            <input
-              type="password"
-              id="profilePassword"
-              name="profilePassword"
-              required
-          /></span>
-          <br />
-          <span
-            ><label for="profilePasswordCheck">Confirme a senha:</label>
-            <input
-              type="password"
-              id="profilePasswordCheck"
-              name="profilePasswordCheck"
-              required
-          /></span>
-        </fieldset>
-        <p id="alertPassword">
-          É obrigatório confirmar a senha atual ou alterada
-        </p>
-        <p id="otherAlerts" class="otherAlerts"></p>
-        <fieldset id="profile-user-address">
-          <span
-            ><label for="profileAddress">Morada:</label>
-            <input
-              type="text"
-              id="profileAddress"
-              name="profileAddress"
-              required
-          /></span>
-          <br />
-          <span
-            ><label for="profilePC">Código Postal:</label>
-            <input type="text" id="profilePC" name="profilePC" required
-          /></span>
-          <br />
-          <span
-            ><label for="profileCountry">País:</label>
-            <input
-              type="text"
-              id="profileCountry"
-              name="profileCountry"
-              required
-          /></span>
-        </fieldset>
-        <span id="submit-profile-wrapper">
-          <button type="submit" id="submit-profile">Guardar alterações</button>
-        </span>
-      </form>
+      <article id="profile-edit-info">
+        <h2>Perfil</h2>
+        <form action="" id="edit-profile-form">
+            <span
+              ><label for="profileName">Nome:</label>
+              <input type="text" id="profileName" name="profileName"
+            /></span>
+            <br />
+            <span
+              ><label for="profileEmail">E-mail:</label>
+              <input type="email" id="profileEmail" name="profileEmail"
+            /></span>
+            <br />
+            <span
+              ><label for="profileAddress">Morada:</label>
+              <input
+                type="text"
+                id="profileAddress"
+                name="profileAddress"
+            /></span>
+            <br />
+            <span
+              ><label for="profilePC">Código Postal:</label>
+              <input type="text" id="profilePC" name="profilePC"
+            /></span>
+            <br />
+            <span
+              ><label for="profileCountry">País:</label>
+              <input
+                type="text"
+                id="profileCountry"
+                name="profileCountry"
+            /></span>
+          <span id="submit-profile-wrapper">
+            <button type="submit" id="submit-profile">Guardar alterações</button>
+          </span>
+        </form>
+      </article>
+      <article id="profile-edit-password">
+        <h2>Password</h2>
+        <form action="" id="edit-profile-password-form">
+            <span
+              ><label for="profilePassword">Senha:</label>
+              <input
+                type="password"
+                id="profilePassword"
+                name="profilePassword"
+                required
+            /></span>
+            <br />
+            <span
+              ><label for="profilePasswordCheck">Confirme a senha:</label>
+              <input
+                type="password"
+                id="profilePasswordCheck"
+                name="profilePasswordCheck"
+                required
+            /></span>
+          <p id="alertPassword">
+            É obrigatório confirmar a senha atual ou alterada
+          </p>
+          <p id="otherAlerts" class="otherAlerts"></p>
+          <span id="submit-profile-password-wrapper">
+            <button type="submit" id="submit-profile-password">Guardar password</button>
+          </span>
+        </form>
+      </article> 
     </section>
     <footer id="footer">
       <div class="footer-submenu">

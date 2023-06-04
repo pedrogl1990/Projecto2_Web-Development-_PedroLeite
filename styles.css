@@ -55,6 +55,64 @@ hr {
   cursor: pointer;
 }
 
+/* CSS Modal Cookies */
+
+.modal-cookies {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+
+.cookiesHide {
+  display: none;
+}
+
+#cookies-header {
+  background-color: #f5f5f5;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cookies-text {
+  color: rgb(170, 170, 170);
+}
+
+#cookies-text a {
+  color: #0075be;
+  text-decoration: none;
+}
+
+#cookies-text a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#modal-cookies-button {
+  background-color: #f16248;
+  color: #f5f5f5;
+  margin-left: 50px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 800;
+}
+
+#modal-cookies-button:hover {
+  background-color: #f5f5f5;
+  color: #f16248;
+  cursor: pointer;
+  border: 2px solid #f16248;
+}
+
 /* CSS Modal */
 
 #modal {
@@ -203,6 +261,10 @@ header {
   font-size: 14px;
 }
 
+#admin-icon {
+  display: none;
+}
+
 .search-bar {
   width: 0px;
   height: 30px;
@@ -216,6 +278,7 @@ header {
 .active-bar {
   width: 300px;
   visibility: visible;
+  margin-left: 20px;
 }
 
 .active-bar:focus {
@@ -318,11 +381,11 @@ h2 {
 
 .button {
   border-radius: 50px;
+  padding: 10px 15px;
   color: #f5f5f5;
   cursor: pointer;
   background-color: #f16248;
   font-weight: 800;
-  padding: 10px 15px;
   text-decoration: none;
 }
 
@@ -474,14 +537,64 @@ h2 {
   margin-bottom: 60px;
 }
 
-#formative-article {
+.formative-article {
   height: 700px;
-  background-image: url(imagens/slider.jpg);
   background-position: 85%;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#formative-article1 {
+  background-image: url(imagens/slider.jpg);
+  display: flex;
+}
+
+#formative-article2 {
+  background-image: url(imagens/slider2.jpg);
+}
+
+#formative-article3 {
+  background-image: url(imagens/slider3.jpg);
+}
+
+#formative-article4 {
+  background-image: url(imagens/slider4.jpg);
+}
+
+#formative-article5 {
+  background-image: url(imagens/slider5.jpg);
+}
+
+#formative-article2,
+#formative-article3,
+#formative-article4,
+#formative-article5 {
+  display: none;
+}
+
+#formative-article2 #formative-offer-titles h3,
+#formative-article4 #formative-offer-titles h3 {
+  color: #153c85;
+}
+
+#formative-article3 #formative-offer-titles h3 {
+  color: #ebc711;
+}
+
+#formative-article5 #formative-offer-titles h3 {
+  color: #ff701e;
+}
+
+#formative-article2 #formative-offer-titles h4,
+#formative-article2 #formative-offer-text p,
+#formative-article3 #formative-offer-titles h4,
+#formative-article3 #formative-offer-text p,
+#formative-article4 #formative-offer-titles h4,
+#formative-article4 #formative-offer-text p,
+#formative-article5 #formative-offer-titles h4,
+#formative-article5 #formative-offer-text p {
+  color: #fff;
 }
 
 #formative-offer-titles {
@@ -541,6 +654,35 @@ h2 {
 }
 
 /* ____________________________________________________________________ */
+
+/* Media queries - Cookies Midal*/
+
+@media screen and (max-width: 1300px) {
+  #cookies-header {
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #cookies-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    height: 50px;
+  }
+
+  #cookies-text {
+    text-align: center;
+    width: 95vw;
+  }
+
+  #modal-cookies-button {
+    margin-left: 0px;
+  }
+}
 
 /* Media queries - Header*/
 

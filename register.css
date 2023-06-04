@@ -48,8 +48,99 @@ body {
 #toTop-cursor {
   cursor: pointer;
 }
+/* CSS Modal Log*/
 
-/* CSS Modal */
+#modalLog {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal-box-log {
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#modal-form-log {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 400px;
+  height: 250px;
+}
+
+#form-title-log {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+#form-message-log {
+  display: none;
+  font-size: 14px;
+}
+
+#modal-form-log span {
+  display: flex;
+  align-items: center;
+}
+
+#modal-form-log label {
+  margin-right: 10px;
+  width: 50px;
+}
+
+#modal-form-log input {
+  flex-grow: 1;
+  height: 20px;
+  border: 1px solid #aaa;
+}
+
+#form-button-wrapper-log {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#modal-form-log button {
+  width: 100px;
+  height: 40px;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#modal-form-log button:hover {
+  cursor: pointer;
+}
+
+#modal-close-button-log {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5), 0 10px 8px rgba(0, 0, 0, 0.16);
+}
+
+#modal-close-button-log:hover {
+  cursor: pointer;
+}
+
+/* CSS Modal Register */
 
 #modal {
   position: fixed;
@@ -150,6 +241,10 @@ header {
 
 #user-nome {
   font-size: 14px;
+}
+
+#admin-icon {
+  display: none;
 }
 
 .search-bar {

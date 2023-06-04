@@ -1,34 +1,37 @@
 {
   "users": [
     {
-      "id": 0,
-      "nome": "Pedro Leite",
+      "nome": "Pedro Guedes Leite",
       "email": "pgleite1990@gmail.com",
-      "password": "Pedro1234",
-      "morada": "Rua dos templários 454",
-      "código postal": "4410-023",
+      "morada": "Alameda Eca de Queiros 29 4Dto",
+      "código postal": "4410-282",
       "país": "Portugal",
-      "activo": "sim"
+      "password": "Pedro12345@",
+      "activo": "sim",
+      "admin": "sim",
+      "id": 0
     },
     {
       "id": 1,
-      "nome": "Ana Rita Dias",
-      "email": "a.rita@gmail.com",
-      "password": "Rita1234",
-      "morada": "Rua de todas as flores 12",
-      "código postal": "4650-453",
+      "nome": "Rita Dias",
+      "email": "ritadias@gmail.com",
+      "password": "Rita1234@",
+      "morada": "Rua das Flores 12",
+      "código postal": "2155-452",
       "país": "Portugal",
-      "activo": "sim"
+      "activo": "sim",
+      "admin": "não"
     },
     {
       "id": 2,
-      "nome": "César Dias",
-      "email": "cesar.daniel@gmail.com",
-      "morada": "Rua da amizade 543",
-      "código postal": "4655-145",
+      "nome": "César Daniel Dias",
+      "email": "cddias@gmail.com",
+      "password": "Cesar1234@",
+      "morada": "Rua dos Fortes 1221",
+      "código postal": "2125-212",
       "país": "Portugal",
-      "password": "Cesar1234",
-      "activo": "não"
+      "activo": "sim",
+      "admin": "não"
     }
   ]
 }

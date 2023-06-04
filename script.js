@@ -18,6 +18,12 @@ const formMessage = document.getElementById("form-message");
 const iconDiv = document.getElementById("icon-div");
 const iconDivFirstChild = iconDiv.firstChild;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const cookiesButton = document.getElementById("modal-cookies-button");
+const modalCookies = document.getElementById("modal-cookies");
+const formativeArticle = [
+  ...document.getElementsByClassName("formative-article"),
+];
+const adminIcon = document.getElementById("admin-icon");
 let previousUser = document.getElementById("user-nome");
 
 let userLogged = false;
@@ -42,6 +48,14 @@ const logged = () => {
     loginIcon.setAttribute("src", "imagens/login.png");
     loginIcon.setAttribute("alt", "botão de login");
     loginIcon.setAttribute("title", "Login");
+  }
+};
+
+const isAdmin = (admin) => {
+  if (admin === "sim") {
+    adminIcon.style.display = "block";
+  } else {
+    adminIcon.style.display = "none";
   }
 };
 
@@ -108,7 +122,7 @@ loginIcon.addEventListener("click", (evt) => {
     html[0].style.overflow = "hidden";
   } else {
     location.reload();
-    sessionStorage.clear();
+    sessionStorage.removeItem("id");
     userLogged = false;
     logged();
     previousUser.remove();
@@ -137,8 +151,8 @@ const checkData = (email, password) => {
             userLogged = true;
             logged();
             boasVindas(data[userIndex].nome);
+            isAdmin(data[userIndex].admin);
             let userId = data[userIndex].id;
-            sessionStorage.clear();
             sessionStorage.setItem("id", userId);
             modal.style.display = "none";
             html[0].style.overflow = "auto";
@@ -181,8 +195,45 @@ fetch("http://localhost:3000/users")
       userLogged = true;
       logged();
       boasVindas(data[storedUserId].nome);
+      isAdmin(data[storedUserId].admin);
     } else {
       // O usuário não está autenticado
       userLogged = false;
     }
   });
+
+// Controlo do aparecimento da modal de cookies
+
+let isAccepted = "";
+html[0].style.overflow = "hidden";
+
+cookiesButton.addEventListener("click", (evt) => {
+  isAccepted = true;
+  html[0].style.overflow = "auto";
+  sessionStorage.setItem("cookies", isAccepted);
+  modalCookies.classList.add("cookiesHide");
+});
+
+let sessionCookies = sessionStorage.getItem("cookies");
+
+if (sessionCookies) {
+  modalCookies.classList.add("cookiesHide");
+  html[0].style.overflow = "auto";
+}
+
+// Controlo dos sliders de imagens
+
+let currentIndex = 0;
+
+const repeat = () => {
+  formativeArticle[currentIndex].style.display = "none";
+  currentIndex++;
+  if (currentIndex > formativeArticle.length - 1) {
+    currentIndex = 0;
+  }
+  formativeArticle[currentIndex].style.display = "flex";
+};
+
+setInterval(() => {
+  repeat();
+}, 5000);
